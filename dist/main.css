@@ -1,0 +1,156 @@
+html, .todo {
+    margin: 0;
+    padding: 0;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(244, 248, 245);
+}
+.header{
+    top: -111px;
+    width: 100%;
+    font-size: 65px;
+    font-weight: 100;
+    text-align: center;
+    color: rgba(175, 47, 47, 0.15);
+    background: white;
+    margin:0px;
+}
+#app{
+  background: white;
+  position: relative;
+}
+
+.todo-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-y: auto;
+    max-height: 350px;
+    min-height: 250px;
+    border-top: 2px solid #e6e6e6;
+}
+.todo-list li {
+    position: relative;
+    font-size: 20px;
+    border-bottom: 1px solid #ededed;
+}
+.todo-list li label {
+    word-break: break-all;
+    padding: 15px 60px 15px 15px;
+    margin-left: 45px;
+    display: block;
+    line-height: 1.2;
+    transition: color 0.4s;
+}
+.js_toggle_todo{
+    text-align: center;
+    width: 40px;
+    margin: auto 0;
+    border: none;
+    position: absolute;
+    -webkit-appearance: none;
+    margin-top: 7px;
+  }
+ .todo-list li .js_toggle_todo:after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
+}
+
+.todo-list li .js_toggle_todo:checked:after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
+}
+
+.filter:after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
+}
+
+.filter:checked:after {
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
+}
+.filter{
+  -webkit-appearance: none;
+}
+
+
+.todo__item--done {
+    text-decoration: line-through;
+}
+fieldset.radiogroup  { 
+  margin: 0; 
+  padding: 0; 
+  margin-bottom: 1.25em; 
+  padding: .125em; 
+} 
+
+fieldset.radiogroup legend { 
+  margin: 0; 
+  padding: 0; 
+  font-weight: bold; 
+  margin-left: 20px; 
+  font-size: 100%; 
+  color: black; 
+} 
+
+
+ul.radio  {  
+  list-style: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  position: relative;
+  padding: 0px;
+} 
+ul.radio li{
+  width:150px;
+}
+ul.radio li label{
+  position: absolute;
+  top: 13px;
+}
+
+.todo__input {
+  position: relative;
+}
+.todo__input #todoInput {
+  display: inline-block;
+  width: 500px;
+  height: 40px;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 10px 10px 10px 100px;
+  transition: all 0.1s ease-out;
+}
+.todo__input #todoInput + button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border: 0;
+  height: 40px;
+  line-height: 40px;
+  color: green;
+  border-radius: 3px 0 0 3px;
+  padding: 0 20px;
+  background: #C7EFCF;
+  transform: translateZ(0) translateX(0);
+  transition: all 0.3s ease-in;
+  transition-delay: 0.2s;
+}
+.todo__input #todoInput:focus + button {
+  transform: translateY(-120%) translateX(0%);
+  border-radius: 3px;
+  transition: all 0.1s ease-out;
+}
+.todo__input #todoInput:focus {
+  padding: 10px;
+  transition: all 0.3s ease-out;
+  transition-delay: 0.2s;
+}
+
